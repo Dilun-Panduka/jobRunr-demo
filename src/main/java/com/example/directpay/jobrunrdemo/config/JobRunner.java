@@ -12,10 +12,5 @@ import org.springframework.context.annotation.Configuration;
 public class JobRunner {
      private static final Logger LOGGER = LoggerFactory.getLogger(JobRunner.class);
 
-    @Bean
-    public StorageProvider storageProvider(JobMapper jobMapper) {
-        InMemoryStorageProvider storageProvider = new InMemoryStorageProvider();
-        storageProvider.setJobMapper(jobMapper);
-        return storageProvider;
-    } 
+
 }
