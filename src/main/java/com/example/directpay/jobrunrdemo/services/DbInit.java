@@ -7,6 +7,7 @@ import org.jobrunr.scheduling.cron.Cron;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 @Service
 public class DbInit implements CommandLineRunner{
@@ -19,6 +20,7 @@ public class DbInit implements CommandLineRunner{
 
 
     @Override
+    @Transactional
     public void run(String... args) {
 
          /*if(alreadySetup)
